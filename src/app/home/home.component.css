@@ -1,0 +1,24 @@
+ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li a {
+    height: 20rem;
+    width: 20rem;
+    border: 4px solid sandybrown;
+    border-radius: 1rem;
+    margin: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+li a:hover {
+    opacity: 0.9;
+    cursor: pointer;
+}
