@@ -9,7 +9,7 @@ a {
 }
 
 a  .logo {
-    font-family: bold;
+    font-weight: bold;
     padding: 1em;
     
 }
@@ -34,6 +34,6 @@ nav ul {
 nav ul li a {
     padding: 1em;
     display: inline-block;
-    
+
 
 }
