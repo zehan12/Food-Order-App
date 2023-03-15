@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FoodService } from '../sevices/food/food.service';
-import { Foods } from '../shared/models/food';
+import { Foods } from '../shared/models/Foods';
 import { StarRatingComponent } from 'ng-starrating';
 import { ActivatedRoute } from '@angular/router';
 
