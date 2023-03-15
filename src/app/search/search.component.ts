@@ -20,4 +20,8 @@ export class SearchComponent {
     })
   }
 
+  search(): void {
+    
+  }
+
 }
