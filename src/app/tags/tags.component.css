@@ -1,0 +1,13 @@
+.tag-container {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem auto ;
+}
+
+.tag {
+    border-radius: 1rem;
+    background-color:azure;
+    font-size: .9rem;
+    padding: .1rem .5rem;
+}
+
