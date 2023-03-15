@@ -19,7 +19,9 @@ export class HomeComponent implements OnInit {
       // this will search item from params 
       if (params['searchItem']) {
         this.foods = this.fs.getAll().filter((food) => food.name.toLowerCase().includes(params['searchItem'].toLowerCase()));
-      // it will this display whole list of items
+      } else if ( params['tag'] ) {
+        this.foods = this.fs.getAllFoodByTags(params['tag'])
+        // it will this display whole list of items
       } else {
         this.foods = this.fs.getAll();
       }

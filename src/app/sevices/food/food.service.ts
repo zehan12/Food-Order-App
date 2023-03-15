@@ -8,6 +8,14 @@ export class FoodService {
 
   constructor() { }
 
+  getAllFoodByTags(tag: string): Foods[] {
+    if (tag === "All") {
+      return this.getAll()
+    } else {
+      return this.getAll().filter(food => food.tags?.includes(tag))
+    }
+  }
+
   getAll(): any[] {
     return [
       {
@@ -100,5 +108,6 @@ export class FoodService {
       }
     ]
   }
+
 }
 
