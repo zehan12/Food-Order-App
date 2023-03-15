@@ -1,9 +1,8 @@
-<div>
-    <input 
-        [(ngModel)]="searchItem"
-        type="text" 
-        placeholder="Search your favorite food"
-        (change)="search()"
-        >
-    <button (click)="search()" >Search Food</button>
+<div class="container search-container">
+    <!-- <img src="https://travelcare.vercel.app/assets/search-bg.475cab22.webp" alt="back" /> -->
+    <div class="search-box">
+        <input class="" [(ngModel)]="searchItem" type="text" placeholder="Search your favorite food"
+            (change)="search()">
+        <button (click)="search()">Search</button>
+    </div>
 </div>
