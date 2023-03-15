@@ -7,11 +7,17 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./search.component.css']
 })
 export class SearchComponent {
+
   searchItem: string = '';
-  constructor( private route:ActivatedRoute ) { }
+
+  constructor(private route: ActivatedRoute) { }
+
   ngOnInit(): void {
-    this.route.params.subscribe(params=>{
-      this.searchItem = params['searchItem'];  
+    this.route.params.subscribe(params => {
+      if (params['searchItem']) {
+        this.searchItem = params['searchItem'];
+      }
     })
   }
+
 }
