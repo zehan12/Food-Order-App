@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
   foods: Foods[] = [];
   constructor(private fs: FoodService, private route: ActivatedRoute) { }
 
+  // this lifecycle hook work as componentDidMount || useEffect
   ngOnInit(): void {
     this.route.params.subscribe(params => {
       // this will search item from params 
