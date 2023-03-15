@@ -10,7 +10,7 @@ export class SearchComponent {
 
   searchItem: string = '';
 
-  constructor(private route: ActivatedRoute, router: Router) { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.route.params.subscribe(params => {
@@ -21,7 +21,9 @@ export class SearchComponent {
   }
 
   search(): void {
-
+    if ( this.searchItem ) {
+      this.router.navigateByUrl('/search/'+this.searchItem);
+    }
   }
 
 }
