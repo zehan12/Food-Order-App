@@ -1,13 +1,22 @@
 .tag-container {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 1rem auto ;
 }
 
 .tag {
-    border-radius: 1rem;
+    border: 1px solid white;
+    border-radius: 10rem;
     background-color:azure;
     font-size: .9rem;
-    padding: .1rem .5rem;
+    padding: .3rem 1rem;
+    margin: .2rem .15rem;
+    font-weight: 400;
+}
+
+.tag:hover {
+    /* border: 1px solid #0D6EFD; */
+    color: #EAA56A;
 }
 
