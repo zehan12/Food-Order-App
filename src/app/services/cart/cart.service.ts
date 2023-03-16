@@ -7,6 +7,7 @@ import { Foods } from 'src/app/shared/models/Foods';
   providedIn: 'root'
 })
 export class CartService {
+  constructor() { }
   private cart: Cart = new Cart();
 
   addToCart(food: Foods): void {
@@ -30,5 +31,4 @@ export class CartService {
   getCart(): Cart {
     return this.cart;
   }
-  constructor() { }
 }
