@@ -9,6 +9,10 @@ export class FoodService {
 
   constructor() { }
 
+  getFoodById(id: number) {
+    return this.getAll().find((food) => food.id === id);
+  }
+
   getAllFoodByTags(tag: string): Foods[] {
     if (tag === "All") {
       return this.getAll()

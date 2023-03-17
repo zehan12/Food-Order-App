@@ -8,10 +8,9 @@ a {
     color: #af1313;
 }
 
-a  .logo {
+a .logo {
     font-weight: bold;
-    padding: 1em;
-    
+    padding: 1em;    
 }
 
 a:hover {
@@ -34,6 +33,4 @@ nav ul {
 nav ul li a {
     padding: 1em;
     display: inline-block;
-
-
 }
