@@ -1,6 +1,5 @@
-<div class="container search-container">
-    <!-- <img src="https://travelcare.vercel.app/assets/search-bg.475cab22.webp" alt="back" /> -->
-    <div class="search-box">
+<div class="container {{searchPageEnable?'':'search-container'}}">
+    <div class="{{searchPageEnable?'search-page-box':'search-box'}}">
         <input class="" [(ngModel)]="searchItem" type="text" placeholder="Search your favorite food"
             (change)="search()">
         <button (click)="search()">Search</button>

@@ -1,8 +1,12 @@
 .search-container {
-    /* background-image: url("https://travelcare.vercel.app/assets/search-bg.475cab22.webp"); */
+    background-image: url("https://travelcare.vercel.app/assets/search-bg.475cab22.webp");
     background-size: cover;
     height: 40vh;
     width: 100%;
+}
+
+.search-page-box {
+    background-color: red;
 }
 
 .search-box {

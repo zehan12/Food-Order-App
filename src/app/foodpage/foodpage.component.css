@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
     margin: 3rem;
-    border: 1px solid black;
+    margin-top: 0;
 }
 
 .food-container>* {
@@ -29,6 +29,7 @@
 
 img {
     height: 20rem;
+    width: 100%;
     border-radius: 3rem;
     flex: 1 0;
     object-fit: contain;
@@ -82,7 +83,7 @@ img {
 }
 
 .details .origins > span {
-    padding: .5rem;
+    padding: .5rem 1rem;
     font-size: 1.2rem;
     margin: .5rem;
     border-radius: 2rem;

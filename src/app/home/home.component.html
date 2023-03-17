@@ -1,5 +1,8 @@
 <app-search></app-search>
 <app-tags></app-tags>
+<div *ngIf="!foods.length" class="container">
+    {{foods.length}}
+</div>
 <ul>
     <li *ngFor="let food of foods">
         <a routerLink="/food/{{food.id}}">
