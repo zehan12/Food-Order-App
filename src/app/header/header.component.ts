@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CartService } from '../services/cart/cart.service';
+import { Cart } from '../shared/models/Cart';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +8,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent {
-  constructor (  ) {}
+  cart!:Cart
+  constructor ( private cartService:CartService ) {
+    this.cart = cartService.getCart();
+  }
 }

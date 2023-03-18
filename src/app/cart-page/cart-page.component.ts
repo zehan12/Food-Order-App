@@ -38,8 +38,8 @@ export class CartPageComponent implements OnInit {
   }
 
   increaseQuantity(cartItem:CartItems){
-    console.log(cartItem)
-    this.cartService.addToCart(cartItem.food)
+    this.cartService.addToCart(cartItem.food);
+    this.setCart()
   }
 
 }

@@ -1,4 +1,6 @@
 <div class="container">
+    <h1>Cart Page</h1>
+
     <ul>
         <li *ngFor="let cartItem of cart.items">
             <div>
@@ -18,7 +20,14 @@
             <button class="remove" (click)="removeFromCart(cartItem)">remove</button>
         </li>
     </ul>
-    <h1>Cart Page</h1>
+    <diV class="checkout">
+        <div class="food-count">
+            {{cart.items.length}}
+        </div>
+        <div>
+            {{cart.totalPrice|currency}}
+        </div>
+    </diV>
 </div>
 
 <!-- <section class="pt-5 pb-5">
