@@ -1,31 +1,38 @@
 <div class="container">
     <h1>Cart Page</h1>
 
-    <ul>
-        <li *ngFor="let cartItem of cart.items">
-            <div>
-                <img style="width: 200px;" [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
-            </div>
-            <div>
-                <span className="p-1 px-2 text-lg bg-black text-white"><button
-                        (click)="increaseQuantity(cartItem)">+</button></span>
-                <span className="p-1 px-2 text-lg bg-black text-white"><button
-                        (click)="decreaseQuantity(cartItem.food.id)">-</button></span>
-            </div>
-            <div>
-                <a routerLink="/food/{{cartItem.food.id}}">{{cartItem.food.name}}</a>
+    <div class="cart-container">
 
-                <p>Qty:{{cartItem.quantity}}</p>
-            </div>
-            <button class="remove" (click)="removeFromCart(cartItem)">remove</button>
-        </li>
-    </ul>
+        <ul>
+            <li *ngFor="let cartItem of cart.items">
+                <div>
+                    <img [src]="cartItem.food.imageUrl" [alt]="cartItem.food.name">
+                </div>
+
+                <div>
+                    <a routerLink="/food/{{cartItem.food.id}}">{{cartItem.food.name}}</a>
+
+                    <p>Qty:{{cartItem.quantity}}</p>
+                </div>
+                <div>
+                    <button class="qty" (click)="increaseQuantity(cartItem)">+</button>
+                    <span>{{cartItem.quantity}}</span>
+                    <button class="qty" (click)="decreaseQuantity(cartItem.food.id)">-</button>
+                </div>
+
+                <div>{{cartItem.food.price|currency}}</div>
+                <button class="remove" (click)="removeFromCart(cartItem)">remove</button>
+
+            </li>
+        </ul>
+
+    </div>
     <diV class="checkout">
         <div class="food-count">
-            {{cart.items.length}}
+           Count {{cart.items.length}}
         </div>
         <div>
-            {{cart.totalPrice|currency}}
+           Price  {{cart.totalPrice|currency}}
         </div>
     </diV>
 </div>
