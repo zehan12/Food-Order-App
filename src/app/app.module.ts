@@ -14,6 +14,7 @@ import { CartPageComponent } from './cart-page/cart-page.component';
 import { FoodpageComponent } from './foodpage/foodpage.component';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { SearchpageComponent } from './searchpage/searchpage.component';
+import { ResultNotFoundComponent } from './result-not-found/result-not-found.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { SearchpageComponent } from './searchpage/searchpage.component';
     CartPageComponent,
     FoodpageComponent,
     BreadcrumbComponent,
-    SearchpageComponent
+    SearchpageComponent,
+    ResultNotFoundComponent
   ],
   imports: [
     BrowserModule,

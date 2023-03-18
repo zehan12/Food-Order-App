@@ -13,9 +13,12 @@ export class CartService {
   addToCart(food: Foods): void {
     let cartItem = this.cart.items.find(item => item.food.id === food.id)
     if (cartItem) {
-      this.changeQuantity(food.id, cartItem.quantity + 1);
+      console.log(cartItem, "is already created")
+      cartItem.quantity++
+      this.changeQuantity(food.id, cartItem.quantity);
       return;
     }
+    console.log(food, "is added created")
     this.cart.items.push(new CartItems(food));
   }
   removeFromCart(foodId: number): void {
@@ -26,6 +29,16 @@ export class CartService {
     let cartItem = this.cart.items.find((item) => item.food.id === foodId);
     if (!cartItem) return;
     cartItem.quantity = quantity;
+  }
+
+  decrementQuantity(foodId: number): void {
+    let cartItem = this.cart.items.find(item => item.food.id === foodId);
+    if (cartItem) {
+      if (cartItem.quantity === 1) return;
+      cartItem.quantity = cartItem.quantity - 1;
+      this.changeQuantity(cartItem.food.id, cartItem.quantity);
+    }
+    console.log(cartItem, "food id", cartItem?.quantity);
   }
 
   getCart(): Cart {
