@@ -89,3 +89,36 @@ ul .remove-button:hover{
     justify-content: center;
     align-items: flex-start;
 }
+
+.checkout .food-count::before {
+    content: 'Total Products: ';
+    color: gray;
+}
+
+.checkout .total-price::before {
+    content: 'Total price: ';
+    color: gray;
+}
+
+.checkout a{
+    padding: 1rem;
+    color: white;
+    background-color: #1eb8fb;
+    display: block;
+    width: 99%;
+    text-align: center;
+}
+
+.checkout a:hover {
+    opacity: 1;
+    cursor: pointer;
+}   
+
+.shopping {
+    text-align: center;
+    padding: 1rem;
+}
+
+.shopping a {
+    margin: auto .9rem;
+}
