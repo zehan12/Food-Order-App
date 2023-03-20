@@ -12,7 +12,6 @@ app.use(cors({
     origin:["http://localhost:4200"]
 }))
 
-app.use("/",express.static('../frontend/dist/foodorder'))
 
 app.get("/api",(req,res)=>{
     res.end("hello from backend")
