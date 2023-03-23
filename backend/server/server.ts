@@ -1,7 +1,7 @@
-require("dotenv").config();
-const express = require("express");
-const cors = require("cors");
-const path = require('path')
+import express from "express";
+import cors from "cors";
+import dotenv from "dotenv";
+dotenv.config(); 
 
 
 const app = express();
@@ -13,8 +13,8 @@ app.use(cors({
 }))
 
 
-app.get("/api",(req,res)=>{
-    res.end("hello from backend")
+app.get("/",(req,res)=>{
+    res.send("hello from backend")
 })
 
 
